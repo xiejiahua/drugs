@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:background="@color/colorGray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                style="@style/toolbar_height"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                >
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/act_register"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/act_login"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    />
+            </android.support.v7.widget.Toolbar>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+            <EditText
+                android:inputType="phone"
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:background="@color/colorWhite"
+                android:hint="@string/act_register_phone"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_fetch_captcha"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="@string/act_register_fetch_captcha"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/et_captcha"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite"
+            android:hint="@string/act_register_captcha"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/et_password"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite"
+            android:hint="@string/act_register_password"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            android:textSize="16sp"/>
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/et_password_again"
+            android:inputType="textPassword"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite"
+            android:hint="@string/act_register_password_again"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+        <EditText
+            android:singleLine="true"
+            android:id="@+id/et_nickname"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite"
+            android:hint="@string/act_register_nickname"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+        <LinearLayout
+            android:id="@+id/ll_sex"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_sex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@color/colorWhite"
+                android:hint="@string/act_register_sex"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+
+            <Button
+                android:layout_marginRight="12dp"
+                android:layout_gravity="center"
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:background="@drawable/ic_drop_down"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_act_association_join_btn"
+            android:text="@string/entel"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+    <include layout="@layout/progress_bar"></include>
+</RelativeLayout>
