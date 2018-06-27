@@ -37,8 +37,6 @@ public class RegisterActivity extends BaseActivity implements IRegisterContract.
 
     @BindView(R.id.toolbar_title)
     TextView mToolbarTitle;
-    @BindView(R.id.tv_login)
-    TextView mTvLogin;
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.et_phone)
@@ -96,13 +94,9 @@ public class RegisterActivity extends BaseActivity implements IRegisterContract.
 
     }
 
-    @OnClick({R.id.tv_login, R.id.btn_fetch_captcha, R.id.btn_register, R.id.ll_sex})
+    @OnClick({ R.id.btn_fetch_captcha, R.id.btn_register, R.id.ll_sex})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.tv_login:
-                Intent intent = new Intent(this, LoginActivity.class);
-                startActivity(intent);
-                break;
             case R.id.btn_fetch_captcha:
                 if (mEtPhone.length() != 11) {
                     showMessage("请输入有效的手机号码！");
@@ -110,6 +104,8 @@ public class RegisterActivity extends BaseActivity implements IRegisterContract.
                     mPresenter.fetchCaptcha(mEtPhone.getText().toString());
                     mTimeCountUtil.start();
                 }
+
+
                 break;
 
             case R.id.ll_sex:

@@ -8,7 +8,6 @@ package com.example.develop2.drugs.common;
 
 public final class AppConfig {
 
-
     /**
      * 服务器地址
      */

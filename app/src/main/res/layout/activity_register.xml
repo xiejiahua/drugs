@@ -35,17 +35,6 @@
                     android:textColor="@color/colorWhite"
                     android:textSize="20sp"/>
 
-                <TextView
-                    android:id="@+id/tv_login"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:text="@string/act_login"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="20sp"
-                    />
             </android.support.v7.widget.Toolbar>
         </LinearLayout>
         <LinearLayout
